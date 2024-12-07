@@ -5,13 +5,15 @@ import TransactionHistory from "./components/TransactionHistory/TransactionHisto
 import userData from "./userData.json";
 import friends from "./friends.json";
 import transactions from "./transactions.json";
+import "./App.css";
+
 
 const App = () => {
   const [currentTask, setCurrentTask] = useState("task1");
 
   return (
     <div>
-      <nav>
+      <nav className="task-list">
         <button onClick={() => setCurrentTask("task1")}>Task 1</button>
         <button onClick={() => setCurrentTask("task2")}>Task 2</button>
         <button onClick={() => setCurrentTask("task3")}>Task 3</button>
