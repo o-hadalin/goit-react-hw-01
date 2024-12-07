@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import Profile from "./components/Profile/Profile";
 import FriendList from "./components/FriendList/FriendList";
+import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
 import userData from "./userData.json";
 import friends from "./friends.json";
+import transactions from "./transactions.json";
 
 const App = () => {
   const [currentTask, setCurrentTask] = useState("task1");
@@ -26,7 +28,9 @@ const App = () => {
           />
         )}
         {currentTask === "task2" && <FriendList friends={friends} />}
-        {currentTask === "task3" && <div>Завдання 3 (Placeholder)</div>}
+        {currentTask === "task3" && (
+          <TransactionHistory items={transactions} />
+        )}
       </div>
     </div>
   );
