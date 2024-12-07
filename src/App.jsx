@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Profile from "./components/Profile/Profile";
+import FriendList from "./components/FriendList/FriendList";
 import userData from "./userData.json";
+import friends from "./friends.json";
 
 const App = () => {
   const [currentTask, setCurrentTask] = useState("task1");
@@ -23,7 +25,7 @@ const App = () => {
             stats={userData.stats}
           />
         )}
-        {currentTask === "task2" && <div>Завдання 2 (Placeholder)</div>}
+        {currentTask === "task2" && <FriendList friends={friends} />}
         {currentTask === "task3" && <div>Завдання 3 (Placeholder)</div>}
       </div>
     </div>
